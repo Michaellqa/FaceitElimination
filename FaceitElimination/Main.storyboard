@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Shape View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ShapeViewController" customModule="FaceitElimination" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNJ-J2-5O1" customClass="DrawerView" customModule="FaceitElimination" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="LOe-re-1hw" appends="YES" id="Faw-jI-71t"/>
+                                    <outletCollection property="gestureRecognizers" destination="iZt-B3-Bfu" appends="YES" id="JFS-tn-uUt"/>
+                                    <outletCollection property="gestureRecognizers" destination="oBl-ZG-Mld" appends="YES" id="hMn-aE-OQC"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lNJ-J2-5O1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6sW-9t-7nB"/>
+                            <constraint firstItem="lNJ-J2-5O1" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Jqn-bX-sR3"/>
+                            <constraint firstAttribute="trailing" secondItem="lNJ-J2-5O1" secondAttribute="trailing" id="c7M-bc-Efo"/>
+                            <constraint firstItem="lNJ-J2-5O1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="puX-XX-M3b"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="drawerView" destination="lNJ-J2-5O1" id="BFi-tN-e2t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="LOe-re-1hw">
+                    <connections>
+                        <action selector="handlePinch:" destination="BYZ-38-t0r" id="dCv-7e-WWj"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="iZt-B3-Bfu">
+                    <connections>
+                        <action selector="handleRotation:" destination="BYZ-38-t0r" id="Eav-zP-RwH"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="oBl-ZG-Mld">
+                    <connections>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="j6G-2B-Lvo"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+</document>

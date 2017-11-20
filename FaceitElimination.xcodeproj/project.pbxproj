@@ -8,24 +8,59 @@
 
 /* Begin PBXBuildFile section */
 		810D52041FA7541D00969916 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810D52031FA7541D00969916 /* AppDelegate.swift */; };
-		810D52061FA7541D00969916 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810D52051FA7541D00969916 /* ViewController.swift */; };
-		810D52091FA7541D00969916 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 810D52071FA7541D00969916 /* Main.storyboard */; };
 		810D520B1FA7541D00969916 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 810D520A1FA7541D00969916 /* Assets.xcassets */; };
 		810D520E1FA7541D00969916 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 810D520C1FA7541D00969916 /* LaunchScreen.storyboard */; };
+		810D52161FA7546C00969916 /* DrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810D52151FA7546C00969916 /* DrawerView.swift */; };
+		810D52181FA7547B00969916 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810D52171FA7547B00969916 /* extensions.swift */; };
+		810D521A1FA7548E00969916 /* ShapeChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810D52191FA7548E00969916 /* ShapeChanger.swift */; };
+		810D521C1FA7549800969916 /* ShapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810D521B1FA7549800969916 /* ShapeViewController.swift */; };
+		810D521E1FA754C400969916 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 810D521D1FA754C400969916 /* Main.storyboard */; };
+		811925E31FBE0D1800BD0769 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811925E21FBE0D1800BD0769 /* Shape.swift */; };
+		8170C1731FC33F090036BCB3 /* FaceitEliminationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8170C1721FC33F090036BCB3 /* FaceitEliminationTests.swift */; };
+		8170C17B1FC33FDC0036BCB3 /* Point3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8170C17A1FC33FDC0036BCB3 /* Point3D.swift */; };
+		8170C17D1FC340650036BCB3 /* Facet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8170C17C1FC340650036BCB3 /* Facet.swift */; };
+		8170C1801FC3411A0036BCB3 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8170C17F1FC3411A0036BCB3 /* Edge.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8170C1751FC33F0A0036BCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 810D51F81FA7541D00969916 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 810D51FF1FA7541D00969916;
+			remoteInfo = FaceitElimination;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		810D52001FA7541D00969916 /* FaceitElimination.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceitElimination.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		810D52031FA7541D00969916 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		810D52051FA7541D00969916 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		810D52081FA7541D00969916 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		810D520A1FA7541D00969916 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		810D520D1FA7541D00969916 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		810D520F1FA7541D00969916 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		810D52151FA7546C00969916 /* DrawerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerView.swift; sourceTree = "<group>"; };
+		810D52171FA7547B00969916 /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		810D52191FA7548E00969916 /* ShapeChanger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeChanger.swift; sourceTree = "<group>"; };
+		810D521B1FA7549800969916 /* ShapeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShapeViewController.swift; path = ../../BarrelRoll3D/BarrelRoll/ShapeViewController.swift; sourceTree = "<group>"; };
+		810D521D1FA754C400969916 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		811925E21FBE0D1800BD0769 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		8170C1701FC33F090036BCB3 /* FaceitEliminationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceitEliminationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8170C1721FC33F090036BCB3 /* FaceitEliminationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceitEliminationTests.swift; sourceTree = "<group>"; };
+		8170C1741FC33F0A0036BCB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8170C17A1FC33FDC0036BCB3 /* Point3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point3D.swift; sourceTree = "<group>"; };
+		8170C17C1FC340650036BCB3 /* Facet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facet.swift; sourceTree = "<group>"; };
+		8170C17F1FC3411A0036BCB3 /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		810D51FD1FA7541D00969916 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8170C16D1FC33F090036BCB3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				810D52021FA7541D00969916 /* FaceitElimination */,
+				8170C1711FC33F090036BCB3 /* FaceitEliminationTests */,
 				810D52011FA7541D00969916 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				810D52001FA7541D00969916 /* FaceitElimination.app */,
+				8170C1701FC33F090036BCB3 /* FaceitEliminationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,14 +91,46 @@
 		810D52021FA7541D00969916 /* FaceitElimination */ = {
 			isa = PBXGroup;
 			children = (
-				810D52031FA7541D00969916 /* AppDelegate.swift */,
-				810D52051FA7541D00969916 /* ViewController.swift */,
-				810D52071FA7541D00969916 /* Main.storyboard */,
-				810D520A1FA7541D00969916 /* Assets.xcassets */,
-				810D520C1FA7541D00969916 /* LaunchScreen.storyboard */,
+				8170C17E1FC340770036BCB3 /* Model */,
+				810D521F1FA773E000969916 /* SupportingFiles */,
+				810D521B1FA7549800969916 /* ShapeViewController.swift */,
+				810D52191FA7548E00969916 /* ShapeChanger.swift */,
+				810D521D1FA754C400969916 /* Main.storyboard */,
+				810D52151FA7546C00969916 /* DrawerView.swift */,
+				810D52171FA7547B00969916 /* extensions.swift */,
 				810D520F1FA7541D00969916 /* Info.plist */,
 			);
 			path = FaceitElimination;
+			sourceTree = "<group>";
+		};
+		810D521F1FA773E000969916 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				810D52031FA7541D00969916 /* AppDelegate.swift */,
+				810D520A1FA7541D00969916 /* Assets.xcassets */,
+				810D520C1FA7541D00969916 /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		8170C1711FC33F090036BCB3 /* FaceitEliminationTests */ = {
+			isa = PBXGroup;
+			children = (
+				8170C1721FC33F090036BCB3 /* FaceitEliminationTests.swift */,
+				8170C1741FC33F0A0036BCB3 /* Info.plist */,
+			);
+			path = FaceitEliminationTests;
+			sourceTree = "<group>";
+		};
+		8170C17E1FC340770036BCB3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8170C17C1FC340650036BCB3 /* Facet.swift */,
+				811925E21FBE0D1800BD0769 /* Shape.swift */,
+				8170C17A1FC33FDC0036BCB3 /* Point3D.swift */,
+				8170C17F1FC3411A0036BCB3 /* Edge.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +153,24 @@
 			productReference = 810D52001FA7541D00969916 /* FaceitElimination.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8170C16F1FC33F090036BCB3 /* FaceitEliminationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8170C1791FC33F0A0036BCB3 /* Build configuration list for PBXNativeTarget "FaceitEliminationTests" */;
+			buildPhases = (
+				8170C16C1FC33F090036BCB3 /* Sources */,
+				8170C16D1FC33F090036BCB3 /* Frameworks */,
+				8170C16E1FC33F090036BCB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8170C1761FC33F0A0036BCB3 /* PBXTargetDependency */,
+			);
+			name = FaceitEliminationTests;
+			productName = FaceitEliminationTests;
+			productReference = 8170C1701FC33F090036BCB3 /* FaceitEliminationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -97,6 +184,11 @@
 					810D51FF1FA7541D00969916 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
+					};
+					8170C16F1FC33F090036BCB3 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 810D51FF1FA7541D00969916;
 					};
 				};
 			};
@@ -114,6 +206,7 @@
 			projectRoot = "";
 			targets = (
 				810D51FF1FA7541D00969916 /* FaceitElimination */,
+				8170C16F1FC33F090036BCB3 /* FaceitEliminationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -125,7 +218,14 @@
 			files = (
 				810D520E1FA7541D00969916 /* LaunchScreen.storyboard in Resources */,
 				810D520B1FA7541D00969916 /* Assets.xcassets in Resources */,
-				810D52091FA7541D00969916 /* Main.storyboard in Resources */,
+				810D521E1FA754C400969916 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8170C16E1FC33F090036BCB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,22 +236,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				810D52061FA7541D00969916 /* ViewController.swift in Sources */,
+				810D521C1FA7549800969916 /* ShapeViewController.swift in Sources */,
+				8170C17D1FC340650036BCB3 /* Facet.swift in Sources */,
+				810D52161FA7546C00969916 /* DrawerView.swift in Sources */,
 				810D52041FA7541D00969916 /* AppDelegate.swift in Sources */,
+				810D52181FA7547B00969916 /* extensions.swift in Sources */,
+				811925E31FBE0D1800BD0769 /* Shape.swift in Sources */,
+				810D521A1FA7548E00969916 /* ShapeChanger.swift in Sources */,
+				8170C17B1FC33FDC0036BCB3 /* Point3D.swift in Sources */,
+				8170C1801FC3411A0036BCB3 /* Edge.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8170C16C1FC33F090036BCB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8170C1731FC33F090036BCB3 /* FaceitEliminationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		810D52071FA7541D00969916 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				810D52081FA7541D00969916 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		8170C1761FC33F0A0036BCB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 810D51FF1FA7541D00969916 /* FaceitElimination */;
+			targetProxy = 8170C1751FC33F0A0036BCB3 /* PBXContainerItemProxy */;
 		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
 		810D520C1FA7541D00969916 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -298,6 +413,36 @@
 			};
 			name = Release;
 		};
+		8170C1771FC33F0A0036BCB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FaceitEliminationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.FaceitEliminationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FaceitElimination.app/FaceitElimination";
+			};
+			name = Debug;
+		};
+		8170C1781FC33F0A0036BCB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FaceitEliminationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.FaceitEliminationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FaceitElimination.app/FaceitElimination";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -315,6 +460,15 @@
 			buildConfigurations = (
 				810D52131FA7541D00969916 /* Debug */,
 				810D52141FA7541D00969916 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8170C1791FC33F0A0036BCB3 /* Build configuration list for PBXNativeTarget "FaceitEliminationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8170C1771FC33F0A0036BCB3 /* Debug */,
+				8170C1781FC33F0A0036BCB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
