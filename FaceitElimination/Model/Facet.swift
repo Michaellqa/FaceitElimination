@@ -14,7 +14,7 @@ extension Facet {
         guard points.count > 1 else { return [] }
         var edges = [Edge]()
         
-        for index in 0..<points.count {
+        for index in 0..<points.count-1 {
             edges.append(Edge(start: points[index], end: points[index+1]))
         }
         edges.append(Edge(start: points.last!, end: points.first!))

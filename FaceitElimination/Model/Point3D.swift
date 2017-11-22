@@ -15,6 +15,12 @@ struct Point3D: Comparable {
     static func +(p1: Point3D, p2: Point3D) -> Point3D {
         return Point3D(x: p1.x + p2.x, y: p1.y + p2.y, z: p1.z + p2.z)
     }
+    static func -(p1: Point3D, p2: Point3D) -> Point3D {
+        return Point3D(x: p1.x - p2.x, y: p1.y - p2.y, z: p1.z - p2.z)
+    }
+    static func *(p1: Point3D, value: CGFloat) -> Point3D {
+        return Point3D(x: p1.x * value, y: p1.y * value, z: p1.z * value)
+    }
     static func <(lhs: Point3D, rhs: Point3D) -> Bool {
         return false
     }
