@@ -51,51 +51,65 @@ class DrawerView: UIView {
     func visibleEdges() -> [Edge] {
         let aVisibleFacets = visibleFacets() // to rename
         var edges = Shape.edges(of: aVisibleFacets)
-        
-        func checkEdge(edge: Edge) {
+        // если рассмотренное ребро удаляется/изменяется не рассматривать его с другими гранями
+//        var newEdges = [Edge]()
+        for edge in edges {
             for facet in aVisibleFacets {
-                if let intersections = facetIntersectionPoints(facet, edge: edge) {
-                    var t1 = tParam(edge: edge, point: intersections.p1)
-                    var t2 = tParam(edge: edge, point: intersections.p2)
-                    if t1 > t2 { swap(&t1, &t2) } // X
-                    
-                    if (t2 < 0) || (1 < t1) { continue } // no intersection for edge
-                    if isFacetCloserToTheScreen(edge, than: facet) {
-                        if (t1 < 0 && 1 < t2) {
-                            if let index = edges.index(of: edge) { edges.remove(at: index) }
+                let subEdges = getVisibseSubEdges(of: edge, coveredBy: facet)
+                print(subEdges.count)
+                if let index = edges.index(of: edge) {
+                    switch subEdges.count {
+                    case 0:
+                        edges.remove(at: index)
+                    case 1:
+                        if edge != subEdges[0] {
+                            edges[index] = subEdges[0]
                         }
-                        else if (0 < t1 && 1 < t2) {
-                            if let index = edges.index(of: edge) { edges.remove(at: index) }
-                            edges.append(contentsOf: edge.cut(range: t1...1))
-                        }
-                        else if (t1 < 0 && t2 < 1) {
-                            if let index = edges.index(of: edge) { edges.remove(at: index) }
-                            edges.append(contentsOf: edge.cut(range: 0...t2))
-                        }
-                        else if (0 < t1 && t2 < 1 && t1 <= t2) {
-                            if let index = edges.index(of: edge) { edges.remove(at: index) }
-                            edges.append(contentsOf: edge.cut(range: t1...t2))
-                        }
+                    case 2:
+                        edges.remove(at: index)
+                        edges.append(subEdges[0])
+                        edges.append(subEdges[1])
+                    default:
+                        print("Error")
                     }
                 }
             }
         }
-        
-        for edge in edges {
-            checkEdge(edge: edge)
-        }
-        
         return edges
+    }
+    
+    func getVisibseSubEdges(of edge: Edge, coveredBy facet: Facet) -> [Edge] {
+        var newEdges = [edge]
+        
+        if let intersections = facetIntersectionPoints(facet, edge: edge) {
+            var t1 = tParam(edge: edge, point: intersections.p1)
+            var t2 = tParam(edge: edge, point: intersections.p2)
+            if t1 > t2 { swap(&t1, &t2) } // X
+            
+            if (t2 <= 0) || (1 <= t1 || t1 == t2) { return [edge] }
+            if isFacetCloserToTheScreen(edge, than: facet) {
+                if (t1 <= 0 && 1 <= t2) { newEdges = []; print("newEdges.count \(newEdges.count)") }
+                else if (0 <= t1 && 1 <= t2) { newEdges = edge.cut(range: t1...1) }
+                else if (t1 <= 0 && t2 <= 1) { newEdges = edge.cut(range: 0...t2) }
+                else if (0 <= t1 && t2 <= 1 && t1 < t2) { newEdges = edge.cut(range: t1...t2); print("newEdges.count \(newEdges.count)") }
+                else { print("that shouldn't been happen! \(t1) & \(t2)") }
+            }
+        }
+        return newEdges
     }
     
     // X
     func isFacetCloserToTheScreen(_ edge: Edge, than facet: Facet) -> Bool {
         // TODO
-        let ep = (edge.start + edge.end) * 0.5
-        let fp = (facet.points[0] + facet.points[1] + facet.points[2] + facet.points[3]) * 0.25
-        let edgeProj = ep.y - 1/2 * ep.x*sin(zAngle) - 1/2 * ep.z*cos(zAngle)
-        let facetProj = fp.y - 1/2 * fp.x*sin(zAngle) - 1/2 * fp.z*cos(zAngle)
-        return facetProj - edgeProj < -0.000001
+//        let ep = (edge.start + edge.end) * 0.5
+//        let fp = (facet.points[0] + facet.points[1] + facet.points[2] + facet.points[3]) * 0.25
+//        let edgeProj = ep.y - 1/2 * ep.x*sin(zAngle) - 1/2 * ep.z*cos(zAngle)
+//        let facetProj = fp.y - 1/2 * fp.x*sin(zAngle) - 1/2 * fp.z*cos(zAngle)
+//        return facetProj - edgeProj < -0.000001
+        
+        let emax = min(edge.start.y, edge.end.y)
+        let fmax = min(facet.points[0].y, facet.points[1].y, facet.points[2].y, facet.points[3].y)
+        return fmax < emax
     }
     
     typealias IntersectCouple = (p1: CGPoint, p2: CGPoint)
